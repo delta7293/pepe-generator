@@ -11,29 +11,49 @@ async function seedTraits() {
   const folders = await fs.readdir(TRAITS_DIR);
 
   for (const folder of folders) {
+    const existing = await db
+      .selectFrom('traits')
+      .select('id')
+      .where('folder', '=', folder)
+      .executeTakeFirst();
+
+    if (existing) {
+      console.log(`Skipping already seeded folder: ${folder}`);
+      continue;
+    }
+
     const folderPath = path.join(TRAITS_DIR, folder);
     const files = await fs.readdir(folderPath);
 
-    // Insert trait
     const [trait] = await db
       .insertInto('traits')
       .values({ name: folder, folder })
       .returningAll()
       .execute();
 
-    // Insert options
     for (const file of files) {
-      const name = file.replace(/\.[^/.]+$/, ''); // remove extension
+      const name = file.replace(/\.[^/.]+$/, '');
       const fileUrl = `${BASE_URL}/${folder}/${file}`;
+
+      const existing = await db
+        .selectFrom('traitOptions')
+        .select('id')
+        .where('traitId', '=', trait.id)
+        .where('file', '=', file)
+        .executeTakeFirst();
+
+      if (existing) {
+        console.log(`Skipping duplicate trait option: ${folder}/${file}`);
+        continue;
+      }
 
       await db.insertInto('traitOptions').values({
         file,
         name,
         traitId: trait.id,
-        // imageUrl: fileUrl, // optional
+        // imageUrl: fileUrl,
       }).execute();
     }
-  }
 
   console.log('Traits and options seeded!');
 }
