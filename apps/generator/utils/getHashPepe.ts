@@ -3,7 +3,7 @@ import { readFile } from 'fs/promises';
 import path from 'path';
 
 export const getHashPepe = async (): Promise<Record<string, number[]>> => {
-  const hashPepeUrl = await kv.get<string>('/hash-pepe');
+  const hashPepeUrl = await kv.get('/hash-pepe') as string | null;
   if (!hashPepeUrl) {
     return {};
   }
