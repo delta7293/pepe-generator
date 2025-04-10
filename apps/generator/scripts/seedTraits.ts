@@ -1,6 +1,8 @@
-import { db } from 'db';
+import { db, init } from 'db';
 import fs from 'fs/promises';
 import path from 'path';
+
+init();
 
 const TRAITS_DIR = path.join(process.cwd(), 'public', 'images', 'traits');
 const BASE_URL = 'http://localhost:3000/images/traits';
