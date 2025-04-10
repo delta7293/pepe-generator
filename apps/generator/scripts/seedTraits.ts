@@ -54,6 +54,7 @@ async function seedTraits() {
         // imageUrl: fileUrl,
       }).execute();
     }
+  }
 
   console.log('Traits and options seeded!');
 }
