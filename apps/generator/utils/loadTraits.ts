@@ -30,7 +30,7 @@ export const loadTraits = async () => {
     );
 
     const blanks =
-      folder === 'bg' || folder === 'eyes' || folder === 'mouth'
+      folder === 'bg' || folder === 'eyes' || folder === 'mouth' || folder === 'body'
         ? []
         : Array.from({ length: 177 - files.length }, () => '');
 
