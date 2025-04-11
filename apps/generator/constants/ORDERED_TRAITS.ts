@@ -1,7 +1,6 @@
 export const ORDERED_TRAITS = [
   'bg',
-  'frog',
-  'face',
+  'shirt',
   'mouth',
   'head',
   'eyes',
