@@ -140,7 +140,7 @@ export default function PepeList() {
           justifyContent: 'center',
           listStyle: 'none',
           margin: 0,
-          minHeight: 'calc(100vh - 64px)',
+//          minHeight: 'calc(100vh - 64px)',
           padding: '20px 20px 80px 20px',
         }}
       >
@@ -160,7 +160,7 @@ export default function PepeList() {
           justifyContent: 'center',
           listStyle: 'none',
           margin: 0,
-          minHeight: 'calc(100vh - 64px)',
+//          minHeight: 'calc(100vh - 64px)',
           padding: '20px 20px 80px 20px',
         }}
       >
@@ -180,7 +180,7 @@ export default function PepeList() {
           justifyContent: 'center',
           listStyle: 'none',
           margin: 0,
-          minHeight: 'calc(100vh - 64px)',
+//          minHeight: 'calc(100vh - 64px)',
           padding: '20px 20px 80px 20px',
         }}
       >
