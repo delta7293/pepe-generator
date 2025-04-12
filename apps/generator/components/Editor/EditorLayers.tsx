@@ -373,7 +373,7 @@ export const EditorLayers: FC = () => {
                   onMouseLeave={() => setHoverImageTraitIndex(-1)}
                 >
                   <img
-                    height="80.25"
+                    height="100"
                     width="100"
                     src={
                       trait.imageData
