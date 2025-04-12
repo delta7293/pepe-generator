@@ -159,7 +159,7 @@ export default function Home() {
 
   return (
     <>
-      <main style={{ margin: '64px 0 88px 0' }}>
+      <main style={{ margin: '88px 0 88px 0' }}>
         {pepes.length === 0 && (
           <Stack alignItems="center" justifyContent="center" height="calc(100vh - 64px)">
             <Typography component="div" variant="h4">
