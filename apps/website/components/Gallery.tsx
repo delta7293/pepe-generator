@@ -129,12 +129,12 @@ export default function Gallery() {
                 margin: 0,
                 padding: 0,
                 position: 'relative',
-                height: 321,
+                height: 400,
                 width: 400,
                 overflow: 'hidden',
               }}
             >
-              {!token && <Skeleton height={321} width={400} />}
+              {!token && <Skeleton height={400} width={400} />}
               {token && (
                 <Link href={`/pepes/${token.id}`}>
                   <img src="/images/blank.png" />

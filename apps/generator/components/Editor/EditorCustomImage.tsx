@@ -29,7 +29,7 @@ export const EditorCustomImage: FC = () => {
 
     const canvas = document.createElement('canvas');
     canvas.width = 400;
-    canvas.height = 321;
+    canvas.height = 400;
 
     const ctx = canvas.getContext('2d')!;
 

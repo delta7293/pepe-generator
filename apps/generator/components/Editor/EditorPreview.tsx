@@ -225,7 +225,7 @@ export const EditorPreview: FC = () => {
 
     const canvas = document.createElement('canvas');
     canvas.width = 400;
-    canvas.height = 321;
+    canvas.height = 400;
 
     const ctx = canvas.getContext('2d')!;
 
@@ -245,7 +245,7 @@ export const EditorPreview: FC = () => {
       const newX = x * multiplier;
       const newY = y * multiplier;
 
-      ctx.drawImage(image, newX, newY, 400, 321);
+      ctx.drawImage(image, newX, newY, 400, 400);
 
       const newTraits = JSON.parse(JSON.stringify(pepeTraits.slice())) as PepeTrait[];
 
@@ -339,7 +339,7 @@ export const EditorPreview: FC = () => {
       {selectedPepe.imageUrl ? (
         <img
           src={selectedPepe.imageUrl}
-          height="321px"
+          height="400px"
           width="400px"
           style={{ display: 'block' }}
         />
@@ -347,7 +347,7 @@ export const EditorPreview: FC = () => {
         <>
           <img
             src={`/images/blank.png`}
-            height="321px"
+            height="400px"
             width="400px"
             style={{ display: 'block' }}
           />
@@ -389,7 +389,7 @@ export const EditorPreview: FC = () => {
                       : customizations[traitIndex].opacity * 0.01,
                   touchAction: 'none',
                 }}
-                height="321px"
+                height="400px"
                 width="400px"
               />
             );

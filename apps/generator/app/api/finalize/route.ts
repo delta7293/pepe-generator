@@ -82,7 +82,7 @@ export async function POST(_: Request) {
         value: string;
       }>;
     }) => {
-      const canvas = createCanvas(400, 321);
+      const canvas = createCanvas(400, 400);
       const ctx = canvas.getContext('2d');
 
       for (let i = 0; i < pepe.traits.length; i++) {

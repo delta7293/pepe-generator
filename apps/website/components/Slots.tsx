@@ -499,7 +499,7 @@ export default function Slots({ initialTokenId }: Props) {
         }}
       >
         {ORDERED_TRAITS.map((traitName, index) => (
-          <Box key={index} overflow="hidden" height={321} position="absolute" width={400}>
+          <Box key={index} overflow="hidden" height={400} position="absolute" width={400}>
             <ul
               className={classNames(styles.boxList, {
                 [styles.spin]: spins[index],
@@ -525,7 +525,7 @@ export default function Slots({ initialTokenId }: Props) {
           </Box>
         ))}
         {pepe?.traits.map((trait, index) => (
-          <Box key={trait.index} overflow="hidden" height={321} position="absolute" width={400}>
+          <Box key={trait.index} overflow="hidden" height={400} position="absolute" width={400}>
             <img
               className={classNames({
                 [styles.spin]: spins[index],
@@ -535,12 +535,12 @@ export default function Slots({ initialTokenId }: Props) {
           </Box>
         ))}
         {!isSpinning && !!tokenId && (
-          <Box overflow="hidden" height={321} position="absolute" width={400}>
+          <Box overflow="hidden" height={400} position="absolute" width={400}>
             <img src={`https://pepe-data-2.vercel.app/images/${tokenId}?rand=${rand}`} />
           </Box>
         )}
         {newPepe?.traits.map((trait, index) => (
-          <Box key={trait.index} overflow="hidden" height={321} position="absolute" width={400}>
+          <Box key={trait.index} overflow="hidden" height={400} position="absolute" width={400}>
             <img
               className={classNames(styles.spin2, {
                 [styles.spin3]: spins[index],
